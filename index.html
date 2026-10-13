@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#080d15">
+<title>F1 06 Web — Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+  <div id="loading"><div class="loader"></div><b>F1 06 WEB</b><span>Preparando circuito...</span></div>
+  <header id="topbar">
+    <div class="brand">F1 <strong>06</strong><small>WEB PORT · PROTÓTIPO</small></div>
+    <div class="telemetry"><span>POS <b id="pos">08</b></span><span>VOLTA <b id="lap">1/3</b></span><span>TEMPO <b id="time">00:00.0</b></span></div>
+    <button id="pause" aria-label="Pausar">Ⅱ</button>
+  </header>
+  <section id="hud">
+    <div class="speed"><strong id="speed">000</strong><span>KM/H</span></div>
+    <div class="gear"><span>MARCHA</span><b id="gear">N</b></div>
+    <div class="status"><span>GIROS <b id="rpm">0</b></span><div class="rpmbar"><i id="rpmbar"></i></div><span>CONDIÇÃO <b id="condition">100%</b></span></div>
+  </section>
+  <div id="message">SEGURE ACELERAR PARA LARGAR</div>
+  <div id="controls">
+    <div class="steer">
+      <button data-control="left" class="control steering" aria-label="Virar à esquerda">◀</button>
+      <button data-control="right" class="control steering" aria-label="Virar à direita">▶</button>
+    </div>
+    <div class="pedals">
+      <button data-control="brake" class="control brake">FREIO</button>
+      <button data-control="throttle" class="control throttle">ACELERAR</button>
+    </div>
+  </div>
+  <div id="overlay" class="visible">
+    <div class="panel">
+      <div class="eyebrow">TEMPORADA 2006 · EXPERIÊNCIA WEB</div>
+      <h1>FORMULA <em>ONE</em><br><span>06</span> WEB</h1>
+      <p>Protótipo 3D de corrida inspirado nos jogos de Fórmula 1 da era PS2. Física e arte são reconstruídas do zero.</p>
+      <div class="specs"><span>● CIRCUITO 3D</span><span>● IA DE ADVERSÁRIOS</span><span>● CONTROLES TOUCH</span></div>
+      <button id="start">INICIAR CORRIDA</button>
+      <button id="resume" hidden>CONTINUAR</button>
+      <small>Protótipo inicial · corrida de demonstração · não é um port oficial.</small>
+    </div>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
